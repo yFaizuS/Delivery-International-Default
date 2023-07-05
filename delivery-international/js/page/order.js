@@ -14,6 +14,13 @@ $(document).ready(function () {
       minute: '2-digit'
     })}`;
   }
+
+  
+  const html = `
+  <p>Phone Number: ${window.localStorage.getItem("noTelp")}</p> 
+  <p>Email: ${window.localStorage.getItem("email")}</p>
+`
+$("#detailInfo1").html(html)
   // Fungsi untuk melihat data pada detail order dengan menggunakan API order dan endpoint GET
   const getDetailOrderajax = (id) => { //Fungsi untuk melihat detail orderan 
     const data = ""; //Fungsi untuk menyimpan data yang sudah difetch pada api

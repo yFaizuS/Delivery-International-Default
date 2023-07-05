@@ -63,6 +63,7 @@ const getUser = () => {
     JSON.stringify(data),
     function (response) {
       localStorage.setItem('email', response.email)
+      localStorage.setItem('noTelp', response.phoneNumber)
     },
     function (jqXHR, textStatus, errorThrown) {
       // alert(jqXHR);

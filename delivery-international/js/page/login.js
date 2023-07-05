@@ -15,8 +15,9 @@ $(document).ready(function () { //Fungsi untuk melakukan login
       'POST',
       JSON.stringify(data),
       function (response) { //Fungsi jika sukses login dengan menyimpan token pada localStorage
+        console.log(response)
         localStorage.setItem('token', response.token)
-        window.location.href = 'index.html'
+        //window.location.href = 'index.html'
         alert("Login Success");
       },
       // Jika dia gagal maka menampilkan respons dari alert dibawah ini 
