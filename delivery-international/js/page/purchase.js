@@ -1,5 +1,14 @@
 $(document).ready(function () {
   // Fungsi untuk mengambilkan data atau mengambil data dari API api/basket
+  const ulHtml = `
+  <div class="col-sm-6">
+      <input type="phoneNumber" class="form-control" id="phoneNumber" value=${window.localStorage.getItem("noTelp")} placeholder="Phone number" disabled>
+  </div>
+  <div class="col-sm-6">
+      <input type="email" class="form-control" id="email" placeholder="Email" value=${window.localStorage.getItem("email")} disabled>
+  </div>
+`
+$("#infoaccount").html(ulHtml);
   const getCart = () => {
     const data = ""; //Fungsi untuk menyimpan data yang sudah diambil dari url API "api/basket"
     const headers = { //Fungsi untuk menyimpan token pada localStorage
